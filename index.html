@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="../WordGuessGame/assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Fruktur|Gloria+Hallelujah|Permanent+Marker" rel="stylesheet">
+    
+</head>
+<body>
+    <header class="header1">
+        <h3>
+            Reptiles Guess Game
+            <small class="text-muted">Try to guess.......if you can!</small>
+          </h3>
+    </header>
+    <div class="container-fluid">
+        <div class="main">
+            <p id="pressLetter">Hit any letter to start!</p>    
+                <h3>Who is that???</h3>
+                <p id="answerWord"> </p>
+                <div class="img">
+                    <img id="image" src=" ">
+                </div>
+                <a id="button1" href=" " class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Press to watch Video!</a>    
+            </div>
+   
+    <div class="right">
+            
+        <h4><span id="numberOfGuesses"></span> Lives </h4>
+        <h4>Guessed Letters: </h4>
+        <p id="guessedLetters"></p>
+        <div class="wins">
+            <h4>Wins:</h4>
+            <p id="numberWins"></p>
+        </div>
+        <div class="losses">
+            <h4>Losses: </h4>
+            <p id="numberLosses"></p>
+        </div>
+    </div>
+    </div>
+    <script src="../WordGuessGame/assets/java/game.js"></script>
+</body>
+</html>

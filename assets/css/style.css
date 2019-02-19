@@ -1,0 +1,121 @@
+body{
+    background-image: url(../images/3eb7ed031f34052c572a2452170d6d3244444444.jpg);
+    height: 700px;
+}
+.header1{
+    color: white;
+}
+h3{
+    color: white;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 35px;
+    font-family: 'Fruktur', cursive;
+}
+.main{
+    flex: 1;
+    order: 2;
+    padding: 20px;
+    
+    border-right: 2px solid gray;
+    border: 10px solid transparent;
+  padding: 15px;
+}
+.container-fluid {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.623);
+    width: 70%;
+    height: 500px;
+    border-right: 2px solid gray;
+    border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(../images/qTBo8Kb7c.png) 20% round;
+}
+.right{
+    order: 3;
+    overflow-wrap: break-word;
+    width: 20%;
+}
+h4{
+    padding: 10px;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 30px;
+}
+#image{
+    display: block;
+}
+#answerWord {
+    letter-spacing: .25em;
+    margin-top: 0;
+    color: #c9c5c1;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Permanent Marker', cursive;
+}
+#guessedLetters {
+    color: #767F82;
+    font-family: 'Permanent Marker', cursive;
+}
+#pressLetter{
+    margin-top: 0;
+    margin-bottom: -40px;
+    text-align: center;
+    color: white;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+#image{
+    height: 300px;
+    margin: -38px;
+    margin-top: 18px;
+}
+.text-muted {
+    color: #b2bbc4;
+    text-shadow: 2px 2px black;
+    font-size: 30px;
+}
+#numberWins{
+    color: grey;
+    font-family: 'Permanent Marker', cursive;
+}
+#numberLosses{
+    color: grey;
+    font-family: 'Permanent Marker', cursive;
+}
+#button1{
+    float: right;
+    margin: -20px;
+    margin-right: 10px;
+    margin-top: -43%;
+    background-color: darkgray;
+    border-color: darkgray;
+}
+@media only screen and (max-width: 600px) {
+    #image{
+        width: 100%;
+        height: 70%;
+    }
+    .container-fluid{
+      width: 100%;
+      height: 700px;
+    }
+    #button1{
+      font-size:10px;
+      margin: 40px;
+      margin-right: 28%
+    }
+    h4{
+      font-size: 15px;
+
+    }
+    #guessedLetters{
+      font-size: 10px
+    }
+    #numberWins{
+      font-size: 10px;
+    }
+    #numberLosses{
+      font-size: 10px;
+    }
+    
+} 
