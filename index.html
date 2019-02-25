@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="../WordGuessGame/assets/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Fruktur|Gloria+Hallelujah|Permanent+Marker" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
 </head>
 <body>
@@ -17,18 +18,19 @@
             <small class="text-muted">Try to guess.......if you can!</small>
           </h3>
     </header>
-    <div class="container-fluid">
-        <div class="main">
-            <p id="pressLetter">Hit any letter to start!</p>    
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-12">
+              <p id="pressLetter">Hit any letter to start!</p>    
                 <h3>Who is that???</h3>
                 <p id="answerWord"> </p>
-                <div class="img">
+                <div class="col col-md-4">
                     <img id="image" src=" ">
                 </div>
                 <a id="button1" href=" " class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Press to watch Video!</a>    
             </div>
-   
-    <div class="right">
+        
+    <div class="col2 col-md-6">
             
         <h4><span id="numberOfGuesses"></span> Lives </h4>
         <h4>Guessed Letters: </h4>
@@ -41,6 +43,7 @@
             <h4>Losses: </h4>
             <p id="numberLosses"></p>
         </div>
+    </div>
     </div>
     </div>
     <script src="../WordGuessGame/assets/java/game.js"></script>

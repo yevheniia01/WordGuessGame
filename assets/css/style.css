@@ -8,39 +8,43 @@ body{
 h3{
     color: white;
     text-align: center;
-    font-size: 50px;
+    font-size: 70px;
     margin-top: 35px;
     font-family: 'Fruktur', cursive;
 }
-.main{
+.col-md-12{
     flex: 1;
     order: 2;
     padding: 20px;
-    
+    width: 1400px;
     border-right: 2px solid gray;
     border: 10px solid transparent;
   padding: 15px;
+  margin-left: 100px;
 }
-.container-fluid {
+.container {
     display: flex;
     background-color: rgba(0, 0, 0, 0.623);
-    width: 70%;
-    height: 500px;
+    width: 90%;
+    height: 600px;
     border-right: 2px solid gray;
     border: 10px solid transparent;
   padding: 15px;
   border-image: url(../images/qTBo8Kb7c.png) 20% round;
 }
-.right{
+.col-md-6{
     order: 3;
     overflow-wrap: break-word;
     width: 20%;
+    margin-left: 50px;
 }
 h4{
     padding: 10px;
     color: white;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 30px;
+    margin-left: 40px;
+    margin-top: 50px;
 }
 #image{
     display: block;
@@ -56,6 +60,7 @@ h4{
 #guessedLetters {
     color: #767F82;
     font-family: 'Permanent Marker', cursive;
+    margin-left: 60px;
 }
 #pressLetter{
     margin-top: 0;
@@ -66,8 +71,8 @@ h4{
 }
 #image{
     height: 300px;
-    margin: -38px;
-    margin-top: 18px;
+    margin: -100px;
+    margin-top: 55%;
 }
 .text-muted {
     color: #b2bbc4;
@@ -77,20 +82,22 @@ h4{
 #numberWins{
     color: grey;
     font-family: 'Permanent Marker', cursive;
+    margin-left: 60px;
 }
 #numberLosses{
     color: grey;
     font-family: 'Permanent Marker', cursive;
+    margin-left: 60px;
 }
 #button1{
     float: right;
     margin: -20px;
-    margin-right: 10px;
-    margin-top: -43%;
+    margin-right: -50px;;
+    margin-top: -36%;
     background-color: darkgray;
     border-color: darkgray;
 }
-@media only screen and (max-width: 600px) {
+/*@media only screen and (max-width: 600px) {
     #image{
         width: 100%;
         height: 70%;
@@ -119,3 +126,4 @@ h4{
     }
     
 } 
+*/
