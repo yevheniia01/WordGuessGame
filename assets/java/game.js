@@ -1,6 +1,7 @@
+//Game array
 var reptileTypes= ['IGUANA', 'GECKO', 'POGONA', 'CAIMANLIZARD', 'BALLPYTHON', 'TREEFROG', 'ANOLE', 'CORNSNAKE', 'MONITOR', 'KINGCOBRA', 'COPPERHEAD', 'CONSTRICTOR'];
 
-
+//Variables
 var maxGuess = 10;
 var storeArr = [];
 var guessedLetters = [];
@@ -9,7 +10,7 @@ var winsCount = 0;
 var losseCount = 0;
 var gameOver = false;
 var randomWord;
-
+//images used in this game
 var image1 = '../WordGuessGame/assets/images/greeniguana.jpeg';
 var image2 = '../WordGuessGame/assets/images/crested_gecko.jpg';
 var image3 = '../WordGuessGame/assets/images/beardeddragon.jpeg';
@@ -23,26 +24,30 @@ var image10 = '../WordGuessGame/assets/images/kingcobra.jpg';
 var image11 = '../WordGuessGame/assets/images/copperhead.jpg';
 var image12 = '../WordGuessGame/assets/images/boa.jpg';
 var imgGameOver = '../WordGuessGame/assests/images/videoblocks-game-over-8-bit-funky-a-funky-colorful-4k-game-over-screen-animation-letters-falling-towards-the-center-8-bit-retro-style-red-and-yellow_hcqx9_kax_thumbnail-full06.png'
-
+//starts game
 function start() {
+    //chose random word
     randomWord = reptileTypes[Math.floor(Math.random() * reptileTypes.length)];
+    //store space to be replaced with word
     storeArr = [];
     
     for (var i =0; i < randomWord.length; i++) {
         storeArr[i] = "_";
     }
 
-
+    //reset variables
     remainingGuesses = maxGuess;
+    //store guessed letters
     guessedLetters = [];
-
+    
+    //clear image
     document.getElementById("image").src = "";
-    document.getElementById('numberOfGuesses').style.color = "";
+    //hide button
     document.getElementById('button1').style.visibility = "hidden";
    
     refresh();
-};
-
+};              
+//update screen
 function refresh(){
     document.getElementById("numberWins").innerHTML = winsCount;
     document.getElementById("numberLosses").innerHTML = losseCount;
@@ -50,7 +55,7 @@ function refresh(){
     document.getElementById("answerWord").innerHTML = storeArr.join("");
     document.getElementById("guessedLetters").innerHTML = guessedLetters;
 };
-
+//checks button that was pressed
 function checkfunc(letter) {
     if (guessedLetters.indexOf(letter)=== -1){
         guessedLetters.push(letter);
@@ -69,7 +74,7 @@ function checkfunc(letter) {
         }
     }
 };
-
+//check wins
 function winFunc(){
     if (storeArr.indexOf("_") === -1){
         winsCount++;
@@ -127,7 +132,7 @@ function winFunc(){
         }
    }
 }; 
-
+//check if lose
 function losseFunc(){
     if (remainingGuesses <=0){
         losseCount++;
@@ -135,13 +140,14 @@ function losseFunc(){
         $(".body").append(imgGameOver)
     }
 };
-
+//event listener
 document.onkeyup = function(event) {
 
     if (gameOver){
         start();
         gameOver = false;
     }else{
+        //check if only letters pressed
         if(event.keyCode >= 65 && event.keyCode <=90){
             checkfunc(event.key.toUpperCase());
             refresh();
